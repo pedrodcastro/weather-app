@@ -13,7 +13,7 @@ const useForecast = () => {
 
   const getSearchOptions = async (term: string) => {
     axios.get(
-      `${BASE_URL}/geo/1.0/direct?q=${term.trim()}&limit=5&lang=pt_br&appid=2d77629adc94813ec841b5337e714271`
+      `${BASE_URL}/geo/1.0/direct?q=${term.trim()}&limit=5&lang=pt_br&appid=${import.meta.env.VITE_APP_API_KEY}`
     )
       .then((res) => setOptions(res.data))
       .catch((e) => console.log({ e }))
@@ -27,7 +27,7 @@ const useForecast = () => {
 
   const getForecast = (data: optionType) => {
     axios.get(
-      `${BASE_URL}/data/2.5/forecast?lat=${data.lat}&lon=${data.lon}&units=metric&lang=pt_br&appid=2d77629adc94813ec841b5337e714271`
+      `${BASE_URL}/data/2.5/forecast?lat=${data.lat}&lon=${data.lon}&units=metric&lang=pt_br&appid=${import.meta.env.VITE_APP_API_KEY}`
     )
       .then((res) => {
         const forecastData = {
