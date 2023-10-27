@@ -20,7 +20,7 @@ App onde é possível consultar informações sobre a previsão do tempo de sua 
 ```js
    git clone https://github.com/pedrodcastro/weather-app.git
 ````
-3. Abra o seu terminal na pasta onde o projeto foi clonado e instale as dependencias necessáias.
+3. Abra o seu terminal na pasta onde o projeto foi clonado e instale as dependencias necessárias.
 ```js
    npm install
 ````
