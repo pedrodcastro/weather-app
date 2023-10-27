@@ -3,7 +3,7 @@ import { useState, useEffect, ChangeEvent } from 'react'
 import { optionType, forecastType } from './../types/index'
 import axios from 'axios'
 
-const BASE_URL = 'http://api.openweathermap.org'
+const BASE_URL = 'https://api.openweathermap.org'
 
 const useForecast = () => {
   const [city, setCity] = useState<optionType | null>(null)
