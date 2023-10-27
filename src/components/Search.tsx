@@ -2,7 +2,7 @@ import { ChangeEvent } from "react";
 import { optionType } from "../types";
 import Suggestions from "./Suggestions";
 import Header from "./Header";
-import { Input, Flex, Box, Button } from '@chakra-ui/react'
+import { Input, Box, Button } from '@chakra-ui/react'
 
 type Props = {
   term: string;
@@ -19,15 +19,15 @@ const Search = ({
   onOptionSelect,
   onSubmit,
 }: Props) => (
-    <Flex direction="column" gap="2" bg="gray" p="5" borderRadius="15">
+    <Box display="flex" flexDirection="column" alignItems="center" gap="2" bg="gray" p="5" borderRadius="15">
         <Header />
-        <Box gap="2">
-        <Input placeholder="Cidade" mb="2" bg="white" type="text" value={term} onChange={onInputChange} />
-        <Suggestions options={options} onSelect={onOptionSelect} />
+        <Box>
+          <Input placeholder="Cidade" bg="white" type="text" borderRadius={0} value={term} onChange={onInputChange} />
+          <Suggestions options={options} onSelect={onOptionSelect} />
+        </Box>
 
         <Button colorScheme="messenger" p="" onClick={onSubmit}>Buscar</Button>
-        </Box>
-    </Flex>
+    </Box>
 );
 
 export default Search;

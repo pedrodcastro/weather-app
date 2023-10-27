@@ -11,9 +11,9 @@ type componentProps = {
 
 const Suggestions = ({ options, onSelect }: componentProps): JSX.Element => {
   return (
-    <UnorderedList listStyleType="none" bg="white">
+    <UnorderedList listStyleType="none" bg="white" margin="0">
       {options.map((option: optionType, index: number) => (
-        <ListItem key={option.name + "-" + index}>
+        <ListItem px="2" key={option.name + "-" + index}>
           <button onClick={() => onSelect(option)}>{option.name}</button>
         </ListItem>
       ))}
